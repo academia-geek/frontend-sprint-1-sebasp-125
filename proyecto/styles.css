@@ -1,0 +1,25 @@
+
+
+body {
+    cursor: pointer;
+    background: var(--Primary, #FEC7D7);
+}
+
+.container_img{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+img {
+    width: 190px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.clase_modificada {
+    width: 100px;
+    height: 200px;
+    transition: 2s;
+}
