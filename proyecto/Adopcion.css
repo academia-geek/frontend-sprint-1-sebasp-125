@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background: var(--Primary, #FEC7D7);
+}
+
+/*-------------*/
+
+.content_msg_1 {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+.msg_1 {
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--Black, #0E172C);
+}
+
+/*-------------*/
+
+.content_msg_2 {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 8%;
+}
+
+.msg_2 {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--Black, #0E172C);
+}
+
+
+/*-------------*/
+.content_perros,
+.content_gatos {
+    border-radius: 8px;
+    background: var(--Black, #0E172C);
+
+    display: flex;
+    width: 200px;
+    padding: 15px;
+    align-items: center;
+    margin: 50px;
+}
+
+.content_cuadros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------*/
+.logo_gato {
+    padding-left: 1%;
+    position: absolute;
+}
+
+/*------------------*/
+.nombre_g_p {
+    font-weight: bold;
+    color: white;
+    padding-left: 10%;
+}

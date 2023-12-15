@@ -1,16 +1,33 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
 
+  * {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  
 body {
+    font-family: Nunito;
     cursor: pointer;
     background: var(--Primary, #FEC7D7);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 
-.container_img{
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.container_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 img {
@@ -23,4 +40,72 @@ img {
     width: 100px;
     height: 200px;
     transition: 2s;
+}
+
+/*----------CSS Segunda Interfaz "Adopcion de Mascotas" img------------*/
+.img_adopcion_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img_adopcion_css {
+    width: 35%;
+    height: 20%;
+    object-fit: contain;
+}
+
+.p_strong_class {
+    flex-direction: column;
+    color: red;
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.btn_siguiente_1 {
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid #0E172C;
+    color: white;
+    display: flex;
+    width: 327px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #0E172C;
+}
+
+.img_adopcion_div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ---------- */
+
+.content_adoptado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn_siguiente_2 {
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid #0E172C;
+    color: white;
+    display: flex;
+    width: 327px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #0E172C;
 }
