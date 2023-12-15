@@ -2,11 +2,79 @@
     "adopcion" : [
         {
             "id": 1,
-            "nombre": "",
+            "nombre": "Chester",
             "edad": "",
-            "raza": "",
+            "raza": "Golden retriever",
             "descripcion": ""
-        } 
+        },
+
+        {
+            "id": 2,
+            "nombre": "Papi",
+            "edad": "",
+            "raza": "Chihuahua",
+            "descripcion": ""
+        },
+
+        {
+            "id": 3,
+            "nombre": "Rocky",
+            "edad": "3 Meses",
+            "raza": "Rottweiler",
+            "descripcion": "Rocky es un perrito muy lindo y cariñoso, tiene 5 hermanitos más y por cuestiones de espacio y tiempo no podremos cuidar a todos, nuestra misión es encontrar la familia ideal para él y seguro que tú eres la persona indicada."
+        }, 
+
+        {
+            "id" : 4,
+            "nombre": "Pelusa",
+            "edad": "",
+            "raza": "Bichón frisé",
+            "descripcion": ""
+        } ,
+        {
+            "id": 5,
+            "nombre": "Matilde",
+            "edad": "6 meses",
+            "raza": "British Shorthair",
+            "descripcion": "Matilde es la mejor guarda espaldas, siempre esta hay para conversar y recibirá cada día con un fuerte cariño. Fue rescatada y busco una persona que le pueda dar todo el amor que ella necesita."
+        },
+
+        {
+            "id": 6,
+            "nombre": "Pelusa",
+            "edad": "",
+            "raza": "Birmano",
+            "descripcion": ""
+        }, 
+        {
+            "id": 7,
+            "nombre": "Kity",
+            "edad": "",
+            "raza": "Bombay",
+            "descripcion": ""
+        }, 
+        {
+            "id": 8,
+            "nombre": "Bombón",
+            "edad": "",
+            "raza": "Gato americano",
+            "descripcion": ""
+        }
+    ],
+
+
+
+    "registro": [
+        {
+            "id" : 1,
+            "nombre": "",
+            "apellido": "" ,
+            "correo": ""
+        }
     ]
+
+
 }
 
+
+  
