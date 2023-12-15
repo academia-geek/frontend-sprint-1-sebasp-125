@@ -1,11 +1,12 @@
 {
-    "adopcion" : [
+    "perros" : [
         {
             "id": 1,
             "nombre": "Chester",
             "edad": "",
             "raza": "Golden retriever",
-            "descripcion": ""
+            "descripcion": "",
+            "dirreccion": ""
         },
 
         {
@@ -13,7 +14,9 @@
             "nombre": "Papi",
             "edad": "",
             "raza": "Chihuahua",
-            "descripcion": ""
+            "descripcion": "",
+            "dirreccion": ""
+            
         },
 
         {
@@ -21,7 +24,8 @@
             "nombre": "Rocky",
             "edad": "3 Meses",
             "raza": "Rottweiler",
-            "descripcion": "Rocky es un perrito muy lindo y cariñoso, tiene 5 hermanitos más y por cuestiones de espacio y tiempo no podremos cuidar a todos, nuestra misión es encontrar la familia ideal para él y seguro que tú eres la persona indicada."
+            "descripcion": "Rocky es un perrito muy lindo y cariñoso, tiene 5 hermanitos más y por cuestiones de espacio y tiempo no podremos cuidar a todos, nuestra misión es encontrar la familia ideal para él y seguro que tú eres la persona indicada.",
+            "dirreccion": "4140 Parker Rd. Allentown, New Mexico 31134"
         }, 
 
         {
@@ -29,36 +33,45 @@
             "nombre": "Pelusa",
             "edad": "",
             "raza": "Bichón frisé",
-            "descripcion": ""
-        } ,
+            "descripcion": "",
+            "dirreccion": ""
+        } 
+
+    ] ,
+
+    "gatos" : [
         {
-            "id": 5,
+            "id": 1,
             "nombre": "Matilde",
             "edad": "6 meses",
             "raza": "British Shorthair",
-            "descripcion": "Matilde es la mejor guarda espaldas, siempre esta hay para conversar y recibirá cada día con un fuerte cariño. Fue rescatada y busco una persona que le pueda dar todo el amor que ella necesita."
+            "descripcion": "Matilde es la mejor guarda espaldas, siempre esta hay para conversar y recibirá cada día con un fuerte cariño. Fue rescatada y busco una persona que le pueda dar todo el amor que ella necesita.",
+            "dirreccion": "4140 Parker Rd. Allentown, New Mexico 31134"
         },
 
         {
-            "id": 6,
+            "id": 2,
             "nombre": "Pelusa",
             "edad": "",
             "raza": "Birmano",
-            "descripcion": ""
+            "descripcion": "",
+            "dirreccion": ""
         }, 
         {
-            "id": 7,
+            "id": 3,
             "nombre": "Kity",
             "edad": "",
             "raza": "Bombay",
-            "descripcion": ""
+            "descripcion": "",
+            "dirreccion": ""
         }, 
         {
-            "id": 8,
+            "id": 4,
             "nombre": "Bombón",
             "edad": "",
             "raza": "Gato americano",
-            "descripcion": ""
+            "descripcion": "",
+            "dirreccion": ""
         }
     ],
 
