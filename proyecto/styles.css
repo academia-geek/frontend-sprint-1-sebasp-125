@@ -5,6 +5,7 @@ body {
     background: var(--Primary, #FEC7D7);
 }
 
+
 .container_img{
 display: flex;
 justify-content: center;
