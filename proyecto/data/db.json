@@ -1,0 +1,110 @@
+{
+    "perros" : [
+        {
+            "id": 1,
+            "nombre": "Chester",
+            "edad": "",
+            "raza": "Golden retriever",
+            "descripcion": "",
+            "dirreccion": "",
+            "personalidad": "",
+            "url" : "https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604538/Adopcion/perros/Card_nim8c0.png"
+        },
+
+        {
+            "id": 2,
+            "nombre": "Papi",
+            "edad": "",
+            "raza": "Chihuahua",
+            "descripcion": "",
+            "dirreccion": "",
+            "personalidad": "",
+            "url" : "https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604534/Adopcion/perros/Card_1_p6kh4f.png"
+            
+            
+        },
+
+        {
+            "id": 3,
+            "nombre": "Rocky",
+            "edad": "3 Meses",
+            "raza": "Rottweiler",
+            "descripcion": "Rocky es un perrito muy lindo y cariñoso, tiene 5 hermanitos más y por cuestiones de espacio y tiempo no podremos cuidar a todos, nuestra misión es encontrar la familia ideal para él y seguro que tú eres la persona indicada.",
+            "dirreccion": "4140 Parker Rd. Allentown, New Mexico 31134",
+            "personalidad": "",
+            "url" : "https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604542/Adopcion/perros/img_iblqlk.png"
+        }, 
+
+        {
+            "id" : 4,
+            "nombre": "Pelusa",
+            "edad": "",
+            "raza": "Bichón frisé",
+            "descripcion": "",
+            "dirreccion": "",
+            "personalidad": "",
+            "url" : "https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604537/Adopcion/perros/Card_3_o3rwzg.png"
+        } 
+
+    ] ,
+
+    "gatos" : [
+        {
+            "id": 1,
+            "nombre": "Matilde",
+            "edad": "6 meses",
+            "raza": "British Shorthair",
+            "descripcion": "Matilde es la mejor guarda espaldas, siempre esta hay para conversar y recibirá cada día con un fuerte cariño. Fue rescatada y busco una persona que le pueda dar todo el amor que ella necesita.",
+            "dirreccion": "4140 Parker Rd. Allentown, New Mexico 31134",
+            "personalidad": "",
+            "url" : ""
+        },
+
+        {
+            "id": 2,
+            "nombre": "Pelusa",
+            "edad": "",
+            "raza": "Birmano",
+            "descripcion": "",
+            "dirreccion": "",
+            "personalidad": "",
+            "url" : ""
+        }, 
+        {
+            "id": 3,
+            "nombre": "Kity",
+            "edad": "",
+            "raza": "Bombay",
+            "descripcion": "",
+            "dirreccion": "",
+            "personalidad": "",
+            "url" : ""
+        }, 
+        {
+            "id": 4,
+            "nombre": "Bombón",
+            "edad": "",
+            "raza": "Gato americano",
+            "descripcion": "",
+            "dirreccion": "",
+            "personalidad": "",
+            "url" : ""
+        }
+    ],
+
+
+
+    "registro": [
+        {
+            "id" : 1,
+            "nombre": "",
+            "apellido": "" ,
+            "correo": ""
+        }
+    ]
+
+
+}
+
+
+  
