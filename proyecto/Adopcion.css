@@ -27,12 +27,12 @@ body {
 .content_msg_2 {
     display: flex;
     margin-top: 1%;
-    margin-left: 8%;
+    margin-left: 5%;
 }
 
 .msg_2 {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--Black, #0E172C);
 }
 
@@ -40,6 +40,7 @@ body {
 /*-------------*/
 .content_perros,
 .content_gatos {
+    cursor: pointer !important;
     border-radius: 8px;
     background: var(--Black, #0E172C);
 
@@ -67,4 +68,44 @@ body {
     font-weight: bold;
     color: white;
     padding-left: 10%;
+}
+
+/*----------Footer------------*/
+.content_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white !important;
+    color: #fff;
+    padding: 2%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn_footer_home {
+
+    color: white;
+    background-color: #0E172C;
+    cursor: pointer !important;
+    border: 1px solid white;
+    width: 10%;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+
+.nombre_h_footer {
+    margin: 10px;
+    text-align: center;
+    padding-top: 10%;
+}
+
+
+/*----------------Logos--------------------*/
+.logo_footer {
+    cursor: pointer;
+    padding-left: 30px;
 }
