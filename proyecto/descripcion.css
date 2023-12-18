@@ -33,12 +33,6 @@ h2 {
     margin-right: 80%;
     padding-top: 3vw;
     font-size: 30px;
-
-    /* logo */
-    background-image:url("https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604481/Adopcion/gatos/male_auckgw.png") ;
-background-repeat: no-repeat;
-background-position: left center;
-padding-left: 20px;
 }
 /*-----------Sexo del Animal----------
 .logo_sexo {

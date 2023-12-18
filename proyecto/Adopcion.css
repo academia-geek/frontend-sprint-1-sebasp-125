@@ -74,19 +74,16 @@ body {
 }
 /*----------Footer------------*/
 .content_footer {
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: white !important;
     color: #fff;
     padding: 2%;
-    font-size: 14px;
     text-align: center;
 }
 
 .btn_footer_home {
-
     color: white;
     background-color: #0E172C;
     cursor: pointer !important;
@@ -115,6 +112,7 @@ body {
 /*----------------------------Cuadros de las imagenes--------------*/
 
 .content_cuadros_img {
+    margin: 30px;
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -136,3 +134,4 @@ En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyf
 .cuadros_class {
     border-right: 40px solid transparent;
 }
+

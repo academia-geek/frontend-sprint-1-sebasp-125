@@ -5,6 +5,11 @@ const content_cuadros_img_id = document.getElementById("content_cuadros_img_id")
 const content_cuadros_img_id_perros = document.getElementById("content_cuadros_img_id_perros")
 
 
+
+//Llamador de Variables de los Logos.
+const mensaje_id = document.getElementById("mensaje_id")
+const corazon_id = document.getElementById("corazon_id")
+const usuario_id = document.getElementById("usuario_id")
 //---------------Cambio de Imaganes depende de la Eleccion del Usuario--------------
 content_cuadros_img_id_gatos.style.display = "none"
 content_gatos_id.addEventListener("click" , function(){
@@ -28,3 +33,11 @@ content_perros_id.addEventListener("click" , function(){
 content_cuadros_img_id.addEventListener("click", function(){
     window.location.href = "descripcion.html"
 })
+
+//-----Funciones------
+
+function mensajes() {
+    mensaje_id.addEventListener("click" , function() {
+        window.location.href = "mensajes.html"
+    })
+}
