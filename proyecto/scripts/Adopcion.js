@@ -1,10 +1,11 @@
 const content_gatos_id = document.getElementById("content_gatos_id")
-const content_cuadros_img_id_gatos = document.getElementById("content_cuadros_img_id_gatos")
 const content_perros_id = document.getElementById("content_perros_id")
 const content_cuadros_img_id = document.getElementById("content_cuadros_img_id")
 const content_cuadros_img_id_perros = document.getElementById("content_cuadros_img_id_perros")
 
-
+//Mandando las Imaganees de las dos mascotas, dependiendo del Json y el For.
+const content_cuadros_img = document.getElementById("content_cuadros_img")
+const content_cuadros_img_id_gatos = document.getElementById("content_cuadros_img_id_gatos")
 
 
 //Llamador de Variables de los Logos.
@@ -43,34 +44,52 @@ function mensajes() {
     })
 }
 
-//Llamando al Json Vercel
-const FetchData = async () => {
+
+//------------------------------------------------------------------
+//Llamando al Json Vercel de los Perros.
+const FetchData_perros = async () => {
 try {
     const response = await axios.get("https://adopcion-alpha.vercel.app/perros")
     return response;
 } catch (Error) {
     console.log("Error")
 }
-
 }
 
 //Aqui volvemos Asnyc el Console.log. o el mostrar en el HTMl
 async function Datos_Asnyc() {
-    const Datos = await FetchData()
-    //console.log(Datos.data.length)
-    for (let i = 0; i < Datos.length; i++) {
-
-        content_cuadros_img_id.innerHTML =  
+    const Datos = await FetchData_perros()
+    //console.log(Datos.data[0])
+    for (let i = 0; i < Datos.data.length; i++) {
+        content_cuadros_img_id_perros.innerHTML +=  
          `<div class="content_cuadros_img" id="content_cuadros_img_id_perros">
-        <img class="cuadros_class" id="1" src="" alt="Imagen 2">
-        <img class="cuadros_class" id="2"  src="" alt="Imagen 3">
-        <img class="cuadros_class" id="3"  src="" alt="Imagen 1">
-        <img class="cuadros_class" id="4"  src="" alt="Imagen 1">
+        <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
     </div>`
-            
         }
-        
+    }
+
+    
+//------------------------------------------------------------------
+//Llamando al Json Vercel de los Gatos.
+const FetchData_gatos = async () => {
+    try {
+        const response = await axios.get("https://adopcion-alpha.vercel.app/gatos")
+        return response;
+    } catch (Error) {
+        console.log("Error")
+    }
+    }
+    async function Datos_Asnyc_Gatos() {
+        const Datos = await FetchData_gatos();
+        //console.log(Datos.data[1].id)
+        for (let i = 0; i < Datos.data.length; i++) {
+            content_cuadros_img_id_gatos.innerHTML += ` <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
+            `
+        }
     }
     
 
+    
+
 Datos_Asnyc()
+Datos_Asnyc_Gatos()
