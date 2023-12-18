@@ -8,6 +8,9 @@ body {
     background: var(--Primary, #FEC7D7);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 /*-------------*/
 
 .content_msg_1 {
@@ -69,7 +72,6 @@ body {
     color: white;
     padding-left: 10%;
 }
-
 /*----------Footer------------*/
 .content_footer {
     position: absolute;
@@ -108,4 +110,29 @@ body {
 .logo_footer {
     cursor: pointer;
     padding-left: 30px;
+}
+
+/*----------------------------Cuadros de las imagenes--------------*/
+
+.content_cuadros_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    padding-left: 3%;   
+    transform: translateY(100%);
+    animation: deslizarArriba 1s ease-in-out forwards;
+    cursor: pointer;
+}
+
+@keyframes deslizarArriba {
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  /* 
+En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyframes, la palabra clave "to" representa el estado final de la animación. En otras palabras, to establece los estilos que se aplicarán al elemento cuando la animación llegue a su estado final.*/
+
+.cuadros_class {
+    border-right: 40px solid transparent;
 }
