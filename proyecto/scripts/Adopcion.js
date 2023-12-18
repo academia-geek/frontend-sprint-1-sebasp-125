@@ -6,6 +6,7 @@ const content_cuadros_img_id_perros = document.getElementById("content_cuadros_i
 
 
 
+
 //Llamador de Variables de los Logos.
 const mensaje_id = document.getElementById("mensaje_id")
 const corazon_id = document.getElementById("corazon_id")
@@ -41,3 +42,35 @@ function mensajes() {
         window.location.href = "mensajes.html"
     })
 }
+
+//Llamando al Json Vercel
+const FetchData = async () => {
+try {
+    const response = await axios.get("https://adopcion-alpha.vercel.app/perros")
+    return response;
+} catch (Error) {
+    console.log("Error")
+}
+
+}
+
+//Aqui volvemos Asnyc el Console.log. o el mostrar en el HTMl
+async function Datos_Asnyc() {
+    const Datos = await FetchData()
+    //console.log(Datos.data.length)
+    for (let i = 0; i < Datos.length; i++) {
+
+        content_cuadros_img_id.innerHTML =  
+         `<div class="content_cuadros_img" id="content_cuadros_img_id_perros">
+        <img class="cuadros_class" id="1" src="" alt="Imagen 2">
+        <img class="cuadros_class" id="2"  src="" alt="Imagen 3">
+        <img class="cuadros_class" id="3"  src="" alt="Imagen 1">
+        <img class="cuadros_class" id="4"  src="" alt="Imagen 1">
+    </div>`
+            
+        }
+        
+    }
+    
+
+Datos_Asnyc()
