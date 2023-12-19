@@ -6,15 +6,18 @@ const content_cuadros_img_id_perros = document.getElementById("content_cuadros_i
 //Mandando las Imaganees de las dos mascotas, dependiendo del Json y el For.
 const content_cuadros_img = document.getElementById("content_cuadros_img")
 const content_cuadros_img_id_gatos = document.getElementById("content_cuadros_img_id_gatos")
+content_cuadros_img_id_perros
+
 
 
 //Llamador de Variables de los Logos.
 const mensaje_id = document.getElementById("mensaje_id")
 const corazon_id = document.getElementById("corazon_id")
 const usuario_id = document.getElementById("usuario_id")
+
 //---------------Cambio de Imaganes depende de la Eleccion del Usuario--------------
 content_cuadros_img_id_gatos.style.display = "none"
-content_gatos_id.addEventListener("click" , function(){
+content_gatos_id.addEventListener("click", function () {
     //Desaparecemos los cuadros anteriores "la de los Perros"
     content_cuadros_img_id_perros.style.display = "none"
 
@@ -22,7 +25,7 @@ content_gatos_id.addEventListener("click" , function(){
     content_cuadros_img_id_gatos.style.display = "flex"
 })
 
-content_perros_id.addEventListener("click" , function(){
+content_perros_id.addEventListener("click", function () {
     //Desaparecemos los cuadros anteriores "la de los gatos"
     content_cuadros_img_id_gatos.style.display = "none"
 
@@ -31,15 +34,12 @@ content_perros_id.addEventListener("click" , function(){
 })
 //----------------------------------------------------------
 
-//-----------Descripcion de la Mascota dependiendo de la Eleccion-----------
-content_cuadros_img_id.addEventListener("click", function(){
-    window.location.href = "descripcion.html"
-})
+
 
 //-----Funciones------
 
 function mensajes() {
-    mensaje_id.addEventListener("click" , function() {
+    mensaje_id.addEventListener("click", function () {
         window.location.href = "mensajes.html"
     })
 }
@@ -48,12 +48,12 @@ function mensajes() {
 //------------------------------------------------------------------
 //Llamando al Json Vercel de los Perros.
 const FetchData_perros = async () => {
-try {
-    const response = await axios.get("https://adopcion-alpha.vercel.app/perros")
-    return response;
-} catch (Error) {
-    console.log("Error")
-}
+    try {
+        const response = await axios.get("https://adopcion-alpha.vercel.app/perros")
+        return response;
+    } catch (Error) {
+        console.log("Error")
+    }
 }
 
 //Aqui volvemos Asnyc el Console.log. o el mostrar en el HTMl
@@ -61,14 +61,14 @@ async function Datos_Asnyc() {
     const Datos = await FetchData_perros()
     //console.log(Datos.data[0])
     for (let i = 0; i < Datos.data.length; i++) {
-        content_cuadros_img_id_perros.innerHTML +=  
-         `<div class="content_cuadros_img" id="content_cuadros_img_id_perros">
+        content_cuadros_img_id_perros.innerHTML +=
+            `<div class="content_cuadros_img" id="content_cuadros_img_id_perros">
         <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
     </div>`
-        }
     }
+}
 
-    
+
 //------------------------------------------------------------------
 //Llamando al Json Vercel de los Gatos.
 const FetchData_gatos = async () => {
@@ -78,18 +78,33 @@ const FetchData_gatos = async () => {
     } catch (Error) {
         console.log("Error")
     }
-    }
-    async function Datos_Asnyc_Gatos() {
-        const Datos = await FetchData_gatos();
-        //console.log(Datos.data[1].id)
-        for (let i = 0; i < Datos.data.length; i++) {
-            content_cuadros_img_id_gatos.innerHTML += ` <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
+}
+async function Datos_Asnyc_Gatos() {
+    const Datos = await FetchData_gatos();
+    //console.log(Datos.data[1].id)
+    for (let i = 0; i < Datos.data.length; i++) {
+        content_cuadros_img_id_gatos.innerHTML += ` <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
             `
-        }
     }
-    
-
-    
+}
 
 Datos_Asnyc()
 Datos_Asnyc_Gatos()
+
+
+//----------Descripcion de los animales-----------
+document.addEventListener("click", async ({ target }) => {
+    if (target.classList.contains('cuadros_class')) {
+        console.log("Paso la funcion If")
+        try {
+            const IdPerro = target.id;
+            localStorage.setItem("Envia_id_perro", IdPerro);
+            window.location.href = "descripcion.html"
+            //const response = await axios.get(`https://adopcion-alpha.vercel.app/perros/${IdPerro}`)
+            //console.log(response)
+        } catch (Error) {
+            console.log(Error.message)
+        }
+    }
+})
+
