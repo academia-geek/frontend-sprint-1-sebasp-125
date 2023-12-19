@@ -11,9 +11,16 @@ content_cuadros_img_id_perros
 
 
 //Llamador de Variables de los Logos.
-const mensaje_id = document.getElementById("mensaje_id")
-const corazon_id = document.getElementById("corazon_id")
-const usuario_id = document.getElementById("usuario_id")
+const mensaje = document.getElementById("mensaje")
+const corazon = document.getElementById("corazon")
+//-----Funciones------
+
+
+const usuario = document.getElementById("usuario")
+
+usuario.addEventListener("click" , function() {
+    window.location.href = "perfil.html"
+})
 
 
 //---------------Cambio de Imaganes depende de la Eleccion del Usuario--------------
@@ -37,13 +44,7 @@ content_perros_id.addEventListener("click", function () {
 
 
 
-//-----Funciones------
 
-function mensajes() {
-    mensaje_id.addEventListener("click", function () {
-        window.location.href = "mensajes.html"
-    })
-}
 
 
 //------------------------------------------------------------------

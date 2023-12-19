@@ -120,14 +120,14 @@ img {
 
 @media screen and (max-width: 375px) {
     .img_adopcion_css {
-      width: 80%; /* Adjust the width as needed for smaller screens */
+      width: 80%; 
     }
   
     .btn_siguiente_1 {
-      width: 100%; /* Make the button full-width on smaller screens */
+      width: 100%;
     }
   
     .btn_siguiente_2 {
-      width: 100%; /* Make the button full-width on smaller screens */
+      width: 100%; 
     }
   }

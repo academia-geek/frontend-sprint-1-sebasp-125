@@ -72,43 +72,22 @@ body {
     color: white;
     padding-left: 10%;
 }
-/*----------Footer------------*/
-.content_footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: white !important;
-    color: #fff;
-    padding: 2%;
+/*--------------Footer-------------------*/
+
+footer {
+    margin-top: 10px;
+    background-color: white;
+    padding: 20px;
     text-align: center;
-}
+  }
 
-.btn_footer_home {
-    color: white;
-    background-color: #0E172C;
-    cursor: pointer !important;
-    border: 1px solid white;
-    width: 10%;
-    padding: 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    padding-left: 2px;
-    padding-bottom: 2px;
-}
-
-.nombre_h_footer {
-    margin: 10px;
-    text-align: center;
-    padding-top: 10%;
-}
-
-
-/*----------------Logos--------------------*/
-.logo_footer {
+  .logo {
     cursor: pointer;
-    padding-left: 30px;
-}
-
+    object-fit: cover;
+    width: 25px; 
+    height: 25px; 
+    margin: 0 60px; 
+  }
 /*----------------------------Cuadros de las imagenes--------------*/
 
 .content_cuadros_img {
@@ -134,4 +113,15 @@ En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyf
     border-right: 40px solid transparent;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .content_cuadros {
+      flex-direction: column;
+    }
+  
+    .content_perros,
+    .content_gatos {
+      width: 100%;
+    }
+  }
 

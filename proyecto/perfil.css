@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+body {    
+    background: var(--Primary, #FEC7D7);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+h1 {
+    font-weight: bold;
+    color: #0E172C;
+}
+
+.content_title {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.content_img {
+    display: flex;
+    justify-content: center;
+}
+
+.content_name,
+.content_cuenta {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-weight: bold;
+    color: black;
+}
+
+/*------------- Input ------------- */
+input::placeholder {
+    padding-left: 20px;
+    font-weight: bold;
+    color: black; 
+   
+  }
+
+.content_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+label,
+input {
+    display: block;
+    margin: 10px;
+}
+
+label {
+    width: 250px;
+    color: black;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 5px;
+    height: 40px;
+    width: 300px;
+    border: 1px solid #0E172C;
+}
+
+/*-------------Guardar----------------*/
+
+.content_guardar {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #0E172C;
+    width: 300px;
+    height: 45px;
+    border-radius: 25px;
+    border: 1px solid #0E172C;
+}
+
+/*--------------Footer-------------------*/
+
+footer {
+    margin-top: 10px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo  {
+    cursor: pointer;
+    object-fit: cover;
+    width: 25px; 
+    height: 25px; 
+    margin: 0 60px; 
+  }
+
+  /*-----------------Estilos Para el Log-------------*/
+  

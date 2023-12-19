@@ -24,7 +24,6 @@ const siguiente_id_1 = document.getElementById("siguiente_id_1")
         
                 setTimeout(() => {
                     primer_logo.style.display = "none"
-
                     //Me Elimina la img anterior para que no me
                     //moleste en la imagen nueva
                     container_img_id.style.display = "none"
