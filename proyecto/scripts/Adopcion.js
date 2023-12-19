@@ -15,6 +15,7 @@ const mensaje_id = document.getElementById("mensaje_id")
 const corazon_id = document.getElementById("corazon_id")
 const usuario_id = document.getElementById("usuario_id")
 
+
 //---------------Cambio de Imaganes depende de la Eleccion del Usuario--------------
 content_cuadros_img_id_gatos.style.display = "none"
 content_gatos_id.addEventListener("click", function () {
@@ -85,11 +86,13 @@ async function Datos_Asnyc_Gatos() {
     for (let i = 0; i < Datos.data.length; i++) {
         content_cuadros_img_id_gatos.innerHTML += ` <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
             `
+           
     }
 }
 
 Datos_Asnyc()
 Datos_Asnyc_Gatos()
+
 
 
 //----------Descripcion de los animales-----------
@@ -105,6 +108,22 @@ document.addEventListener("click", async ({ target }) => {
         } catch (Error) {
             console.log(Error.message)
         }
+    }
+})
+
+
+document.addEventListener('click' , async ({target}) => {
+    console.log("Entro al add.evenlistener")
+    if (target.classList.contains('cuadros_class')) {
+        console.log("paso el if")
+        try {
+            const IdGato = target.id;
+            localStorage.setItem("Envia_id_gato" , IdGato);
+            window.location.href = "descripcion.html"
+        } catch (Error) {
+
+        }
+    
     }
 })
 
