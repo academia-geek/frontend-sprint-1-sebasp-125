@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./perfil.css">
+    <link rel="stylesheet" href="../styles/perfil.css">
     <title>Perfil</title> 
 </head>
 <body>
@@ -24,17 +24,17 @@
         </div>
     
         <label for="">Nombre</label>
-        <input type="text" placeholder="Juan">
+        <input type="text" id="nombre_id" placeholder="Juan">
     
         <label for="">Apellido</label>
-        <input type="text" placeholder="Méndez">
+        <input type="text" id="apellido_id" placeholder="Méndez">
     
         <label for="">Correo</label>
-        <input type="text" placeholder="Juan.Mendez@gmail.conm">
+        <input type="text" id="correo_id" placeholder="Juan.Mendez@gmail.conm">
     </div>
 
     <div class="content_guardar">
-        <button>Guardar</button>
+        <button id="__guardar" >Guardar</button>
     </div>
 
     <footer>
@@ -43,7 +43,7 @@
         <img src="https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604456/Adopcion/gatos/Component_3_cro327.png" id="corazon" alt="Logo 3" class="logo">
         <img src="https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604455/Adopcion/gatos/Component_2_lic7kc.png" id="usuario" alt="Logo 4" class="logo">
       </footer>
-
-      <script src="./scripts/perfil.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="../scripts/perfil.js"></script>
 </body>
 </html>

@@ -77,6 +77,14 @@ input {
     border: 1px solid #0E172C;
 }
 
+
+/* Styles entrada de Credenciales */
+input {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
 /*-------------Guardar----------------*/
 
 .content_guardar {

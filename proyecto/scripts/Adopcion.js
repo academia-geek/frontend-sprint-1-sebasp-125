@@ -6,7 +6,7 @@ const content_cuadros_img_id_perros = document.getElementById("content_cuadros_i
 //Mandando las Imaganees de las dos mascotas, dependiendo del Json y el For.
 const content_cuadros_img = document.getElementById("content_cuadros_img")
 const content_cuadros_img_id_gatos = document.getElementById("content_cuadros_img_id_gatos")
-content_cuadros_img_id_perros
+
 
 
 
@@ -18,7 +18,7 @@ const corazon = document.getElementById("corazon")
 
 const usuario = document.getElementById("usuario")
 
-usuario.addEventListener("click" , function() {
+usuario.addEventListener("click", function () {
     window.location.href = "perfil.html"
 })
 
@@ -40,14 +40,7 @@ content_perros_id.addEventListener("click", function () {
     //Aparecemos los cuadros anteriores "la de los Perros"
     content_cuadros_img_id_perros.style.display = "flex"
 })
-//----------------------------------------------------------
-
-
-
-
-
-
-//------------------------------------------------------------------
+//---------------------------------------------------------
 //Llamando al Json Vercel de los Perros.
 const FetchData_perros = async () => {
     try {
@@ -69,8 +62,6 @@ async function Datos_Asnyc() {
     </div>`
     }
 }
-
-
 //------------------------------------------------------------------
 //Llamando al Json Vercel de los Gatos.
 const FetchData_gatos = async () => {
@@ -83,18 +74,13 @@ const FetchData_gatos = async () => {
 }
 async function Datos_Asnyc_Gatos() {
     const Datos = await FetchData_gatos();
-    //console.log(Datos.data[1].id)
     for (let i = 0; i < Datos.data.length; i++) {
-        content_cuadros_img_id_gatos.innerHTML += ` <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
-            `
-           
+        content_cuadros_img_id_gatos.innerHTML += ` <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">`
     }
 }
 
 Datos_Asnyc()
 Datos_Asnyc_Gatos()
-
-
 
 //----------Descripcion de los animales-----------
 document.addEventListener("click", async ({ target }) => {
@@ -103,28 +89,29 @@ document.addEventListener("click", async ({ target }) => {
         try {
             const IdPerro = target.id;
             localStorage.setItem("Envia_id_perro", IdPerro);
+            localStorage.setItem("perroGato" , 'perro')
             window.location.href = "descripcion.html"
-            //const response = await axios.get(`https://adopcion-alpha.vercel.app/perros/${IdPerro}`)
-            //console.log(response)
         } catch (Error) {
             console.log(Error.message)
         }
     }
 })
 
+content_gatos_id.addEventListener('click', function () {
 
-document.addEventListener('click' , async ({target}) => {
-    console.log("Entro al add.evenlistener")
-    if (target.classList.contains('cuadros_class')) {
-        console.log("paso el if")
-        try {
-            const IdGato = target.id;
-            localStorage.setItem("Envia_id_gato" , IdGato);
-            window.location.href = "descripcion.html"
-        } catch (Error) {
+    console.log("Entro a Gatos")
+    document.addEventListener('click', async ({ target }) => {
+        if (target.classList.contains('cuadros_class')) {
+            console.log("paso el if")
+            try {
+                const IdGato = target.id;
+                localStorage.setItem("Envia_id_gato", IdGato);
+                localStorage.setItem("perroGato" , 'gato')
+                window.location.href = "descripcion.html"
+            } catch (Error) {
 
+            }
         }
-    
-    }
-})
+    })
 
+})
