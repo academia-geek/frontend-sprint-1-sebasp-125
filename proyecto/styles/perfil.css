@@ -80,7 +80,7 @@ input {
 
 /* Styles entrada de Credenciales */
 input {
-    text-align: center;
+    padding-left: 20px;
     font-weight: bold;
     color: black;
 }

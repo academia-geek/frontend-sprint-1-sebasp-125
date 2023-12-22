@@ -1,101 +1,52 @@
-
-/*----------Footer----------
-.content_footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: white !important;
-    color: #fff;
-    padding: 2%;
-    text-align: center;
-}
-
-.btn_footer_home {
-    color: white;
-    background-color: #0E172C;
-    cursor: pointer !important;
-    border: 1px solid white;
-    width: 10%;
-    padding: 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    padding-left: 2px;
-    padding-bottom: 2px;
-}
-
-.nombre_h_footer {
-    margin: 10px;
-    text-align: center;
-    padding-top: 10%;
-}
---*/
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
 
 * {
-    font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FEC7D7;
-    height: 50vh;
+  background: var(--Primary, #FEC7D7);
 }
 
+/*--------------Footer-------------------*/
+footer {
+  margin-top: 10px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
 
+.logo {
+  cursor: pointer;
+  object-fit: cover;
+  width: 25px;
+  height: 25px;
+  margin: 0 60px;
+}
 
-/*---- Title---- */
+/*------Mensaje-------- */
+.content_mensaje {
+  border-radius: 8px;
+  background: var(--White, #FFFFFE);
+  display: flex;
+  width: 327px;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
 
-
-/*------ Mensaje ------ 
-.content_msg {
-
-    height: 100px; 
-    width: 700px;
-
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+.msg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
 }
 
 img {
-    object-fit: cover;
-    height: 100px;
-   width: 200px;
+  width: 10px;
 }
-
-*/
-.message-container {
-    border: 1px solid #ffffff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 4px;
-    background-color: white;
-    padding: 8px;
-    width: 400px; /* Ancho del contenedor */
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .message-container img {
-    width: 80px; /* Ancho de la imagen */
-    height: 200px; /* Altura de la imagen */
-    border-radius: 50%; /* Para hacer la imagen circular */
-    margin-bottom: 10px;
-  }
-
-  .message-container .name {
-    font-weight: bold;
-    font-size: 18px; /* Tamaño del nombre */
-    margin-bottom: 5px;
-  }
-
-  .message-container .content {
-    text-align: center;
-    font-size: 16px; /* Tamaño del contenido del mensaje */
-  } 
