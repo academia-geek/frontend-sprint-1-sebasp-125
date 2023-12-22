@@ -9,6 +9,9 @@
 }
 
 body {
+  justify-content: center;
+  display: flex;
+  align-items: center;
   background: var(--Primary, #FEC7D7);
 }
 
@@ -29,24 +32,59 @@ footer {
 }
 
 /*------Mensaje-------- */
-.content_mensaje {
-  border-radius: 8px;
-  background: var(--White, #FFFFFE);
-  display: flex;
-  width: 327px;
-  padding: 8px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
+button {
+  cursor: pointer;
+  padding: 10px;
 }
 
-.msg {
+h1 {
+  font-size: 30px;
+}
+
+section {
+  padding-bottom: 200px;
+}
+
+.message {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex: 1 0 0;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.content {
+  padding-top: 100px;
 }
 
 img {
-  width: 10px;
+  border-radius: 50%;
+  padding-left: 50px;
+}
+
+.text-content {
+   padding-left:10px; 
+}
+
+.name {
+  padding-left: 80px;
+   font-weight:bold; 
+}
+
+.time {
+   font-size: small; 
+   color:#888; 
+   padding-left: 400px;
+}
+
+
+@media (max-width: 768px) {
+  .message {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

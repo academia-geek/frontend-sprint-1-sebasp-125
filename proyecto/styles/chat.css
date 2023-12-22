@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    background: var(--Primary, #FEC7D7);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Imagen principal */
+.content_img {
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    margin-top: 20px;
+    width: 10%;
+    height: 10%;
+}
+
+p {
+    font-weight: bold;
+    color: #071f58;
+    text-align: center;
+}
+
+/* Section 1 "Mensajes" Entrada*/
+span {
+    color: black;
+    font-weight: bold;
+
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+}
+
+.content_entrada {
+    padding: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    max-width: 80%; /* Ajustar el Texto */
+}
+
+.content_entrada_div {
+    margin-left: 50%; 
+}
+
+p {
+    margin: 10px;
+}
+
+
+/* Input */
+input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+
+    
+    
+}
+
+.content_input {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    height: 80vh;
+
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Section 1 "Mensajes"  Salida */
+
+.content_salida {
+    padding-left: 20px;
+    padding: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    max-width: 50%; /* Ajustar el Texto */
+    max-height: auto;
+}
+
+.content_salida_div {
+    padding-left: 100px;
+}
