@@ -7,20 +7,33 @@ const content_cuadros_img_id_perros = document.getElementById("content_cuadros_i
 const content_cuadros_img = document.getElementById("content_cuadros_img")
 const content_cuadros_img_id_gatos = document.getElementById("content_cuadros_img_id_gatos")
 
-
-
-
-//Llamador de Variables de los Logos.
-const mensaje = document.getElementById("mensaje")
+//Funcionalidad del Footer
+const home = document.getElementById("home")
+const mensajes = document.getElementById("mensaje") 
 const corazon = document.getElementById("corazon")
-//-----Funciones------
-
-
 const usuario = document.getElementById("usuario")
+
+home.addEventListener("click" , function(){
+    window.location.href = "Adopcion_Mascotas.html"
+})
+
+mensajes.addEventListener("click" , function(){
+    window.location.href = "mensajes.html"
+})
 
 usuario.addEventListener("click", function () {
     window.location.href = "perfil.html"
 })
+
+corazon.addEventListener("click", function (){
+    window.location.href = "corazon.html"
+})
+
+
+
+
+
+
 
 
 //---------------Cambio de Imaganes depende de la Eleccion del Usuario--------------

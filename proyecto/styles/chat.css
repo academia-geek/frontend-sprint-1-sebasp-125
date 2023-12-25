@@ -72,7 +72,11 @@ input{
     border: none;
     border-radius: 10px;
 
-    
+    position: fixed;
+    bottom: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
     
 }
 
