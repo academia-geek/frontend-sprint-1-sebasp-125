@@ -7,6 +7,7 @@ const guardar =document.getElementById("guardar");
 const nombre_id = document.getElementById("nombre_id")
 const apellido_id = document.getElementById("apellido_id");
 const correo_id = document.getElementById("correo_id")
+const usuario_id = document.getElementById("usuario_id")
 
 //Llamado de los Div "content"
 const content_form = document.getElementById("content_form")
@@ -42,7 +43,8 @@ corazon.addEventListener("click", function (){
 const FetchData = async () => {
     try {
         const response = await axios.get('https://adopcion-alpha.vercel.app/registro')
-        return response.data
+        return response
+       
     } catch (Error) {
         console.log(Error);
     }
@@ -54,6 +56,7 @@ async function FetchData_Datos() {
         nombre_id.value = `${Data.data[i].nombre_u}`
         apellido_id.value = `${Data.data[i].apellido_u}`
         correo_id.value = `${Data.data[i].correo_u}`
+        
    }
 }
 
@@ -61,20 +64,18 @@ async function guardarDatos() {
     const nuevoNombre = nombre_id.value;
     const nuevoApellido = apellido_id.value;
     const nuevoCorreo = correo_id.value;
+    console.log("Entro a Try");
     try {
-        const response = await axios.put('https://adopcion-alpha.vercel.app/registro' , {
+        const response = await axios.put(`https://adopcion-alpha.vercel.app/registro/3` , {
             'nombre_u': nuevoNombre,
             'apellido_u': nuevoApellido,
             'correo_u': nuevoCorreo
-        })
+        });
         console.log('Datos actualizados correctamente:', response.data);
     } catch (Error) {
-
+        console.error("No se puede Editar." , Error);
     }
-
 }
-
-
 
 
 
