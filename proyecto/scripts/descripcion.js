@@ -3,6 +3,7 @@ const img_principal = document.getElementById("img_principal")
 const content_general = document.getElementById("content_general")
 const content_general_gatos = document.getElementById("content_general_gatos")
 
+const content_2 = document.getElementById("content_2")
 
 //SessionStorage
 const recibe = localStorage.getItem('Envia_id_perro')
@@ -40,12 +41,14 @@ async function Descripcion() {
             <div class="content_img">
             <img class="img_class"  src="${Datos.data[i].url}" alt="${i}">
             </div>
-            <h2>${Datos.data[i].nombre}</h2>
-            <p class="parrafo">${Datos.data[i].raza}</p>
-            <p class="parrafo">Edad: ${Datos.data[i].edad}</p>
-            <p class="parrafo">Descripcion: ${Datos.data[i].descripcion}</p>
-            <p class="parrafo">Personalidad: ${Datos.data[i].personalidad}</p>
             `
+            content_2.innerHTML = `<h2 class="">${Datos.data[i].nombre}</h2>
+            <p class="#">${Datos.data[i].raza}</p>
+            <p class="#">Edad: ${Datos.data[i].edad}</p>
+            <p class="#">Descripcion: ${Datos.data[i].descripcion}</p>
+            <p class="#">Personalidad: ${Datos.data[i].personalidad}</p>
+           `
+            
 
     }   
 }

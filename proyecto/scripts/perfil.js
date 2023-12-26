@@ -56,7 +56,6 @@ async function FetchData_Datos() {
         nombre_id.value = `${Data.data[i].nombre_u}`
         apellido_id.value = `${Data.data[i].apellido_u}`
         correo_id.value = `${Data.data[i].correo_u}`
-        
    }
 }
 

@@ -1,55 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
 
-body , html{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-
-    justify-content: center;
-    background: var(--Primary, #FEC7D7);
-}
-
 * {
     font-family: 'Nunito Sans', sans-serif;
 }
+body, .content2{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-/* Imagen */
-.content_general_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background: var(--Primary, #FEC7D7);
+  }
+  
+  /*
+  .content_general_img {
     background-color: white;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+
+
+  
+  .content_img {
+    text-align: center;
+  }
+  
+  .img_class {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  
+  .parrafo {
+    margin-top: 10px;
+  }
+
+.content_2 {
+    background-color: aqua;
 }
-
-.img_class {
-    width: 375px;
-    height: 442px;
-}
-
-/* Nombre del Animal */
-h2 {
-   color: #0E172C;
-   background-image: url('https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604481/Adopcion/gatos/male_auckgw.png');
-
-   background-repeat: no-repeat;
-   background-position-x: 30%;
-}
-
-/* Btn de volver */ 
-button {
-    cursor: pointer;
-    display: block;
-    background-repeat: no-repeat;
-    background-image: url('https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604453/Adopcion/gatos/Component_1_d1hczx.png');
-    margin-top: 20px;
-    border-radius:10px ;
-    position: relative;
-    width: 200%;
-    height: 8%;
-    background-color: #0E172C;
-    color: white;
-    border: 1px solid #0E172C;
-}
-
-
 /*Raza */
 
 p {
