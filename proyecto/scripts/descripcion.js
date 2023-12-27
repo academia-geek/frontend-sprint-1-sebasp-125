@@ -38,17 +38,13 @@ async function Descripcion() {
     for (let i = 0; i < Datos.data.length; i++) {
         if (recibe == Datos.data[i].id) {
             content_general.innerHTML = `
-            <div class="content_img">
             <img class="img_class"  src="${Datos.data[i].url}" alt="${i}">
-            </div>
-            `
-            content_2.innerHTML = `<h2 class="">${Datos.data[i].nombre}</h2>
+            <h2 class="">${Datos.data[i].nombre}</h2>
             <p class="#">${Datos.data[i].raza}</p>
             <p class="#">Edad: ${Datos.data[i].edad}</p>
             <p class="#">Descripcion: ${Datos.data[i].descripcion}</p>
             <p class="#">Personalidad: ${Datos.data[i].personalidad}</p>
-           `
-            
+            `
 
     }   
 }

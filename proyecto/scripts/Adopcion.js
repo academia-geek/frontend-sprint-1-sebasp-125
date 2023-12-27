@@ -88,7 +88,10 @@ const FetchData_gatos = async () => {
 async function Datos_Asnyc_Gatos() {
     const Datos = await FetchData_gatos();
     for (let i = 0; i < Datos.data.length; i++) {
-        content_cuadros_img_id_gatos.innerHTML += ` <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">`
+        content_cuadros_img_id_gatos.innerHTML += 
+        `<div class="content_cuadros_img" id="content_cuadros_img_id_gatos">
+        <img class="cuadros_class" id="${Datos.data[i].id}" src="${Datos.data[i].url}" alt="Imagen ${i}">
+    </div>`
     }
 }
 

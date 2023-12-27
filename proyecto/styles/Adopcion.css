@@ -43,6 +43,7 @@ body {
 /*-------------*/
 .content_perros,
 .content_gatos {
+    
     cursor: pointer !important;
     border-radius: 8px;
     background: var(--Black, #0E172C);
@@ -55,9 +56,11 @@ body {
 }
 
 .content_cuadros {
+    
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 /*---------------*/
@@ -109,19 +112,77 @@ footer {
   /* 
 En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyframes, la palabra clave "to" representa el estado final de la animación. En otras palabras, to establece los estilos que se aplicarán al elemento cuando la animación llegue a su estado final.*/
 
+
 .cuadros_class {
     border-right: 40px solid transparent;
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-    .content_cuadros {
-      flex-direction: column;
-    }
-  
-    .content_perros,
-    .content_gatos {
-      width: 100%;
-    }
-  }
 
+    /* Celulares */
+  @media screen  and (max-width: 390px){
+    body {
+        margin: 0;
+        padding: 0;
+        background: var(--Primary, #FEC7D7);
+      }
+  
+   
+  /* Seleccion Gato - Perrp */
+      .content_perros,
+      .content_gatos {
+        background-color: red;
+        margin: 2px;
+        width: 300px;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+
+      /* Imagenes */
+
+
+      #content_cuadros_img_id {
+        padding-right:41px ;
+
+      }
+     
+      /* Otros */
+      .logo_gato {
+        margin-left: 5px;
+        width: 50px;
+        height: 50px;
+      }
+  
+      .nombre_g_p {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+ 
+
+      /* Imaganes */
+    
+      .content_cuadros_img {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr))!important;
+        gap: 5px;
+        align-content: start;
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 100%;
+        }
+    
+    
+    }
+
+   
+    .cuadros_class {
+        max-width: 100%; 
+    }
+    
+  
+  
+   
