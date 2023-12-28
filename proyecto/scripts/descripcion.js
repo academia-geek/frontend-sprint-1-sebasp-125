@@ -20,7 +20,7 @@ const favoritos = document.getElementById("favoritos")
 //-----------------------Perros---------------------
 const FetchData = async () => {
     try {
-        const response = await axios.get('https://adopcion-alpha.vercel.app/perros')
+        const response = await axios.get('https://adopcion.onrender.com/perros')
         return response;
     } catch (Error) {
         console.log(Error)
@@ -33,18 +33,17 @@ let contador_perro = 0
 async function Descripcion() {
     
     contador_perro++
-    const Datos = await FetchData();
+    const DatosPerros = await FetchData();
     content_general.innerHTML = '';
-    //console.log(Datos.data)
-    for (let i = 0; i < Datos.data.length; i++) {
-        if (recibe == Datos.data[i].id) {
+    for (let i = 0; i < DatosPerros.data.length; i++) {
+        if (recibe == DatosPerros.data[i].id) {
             content_general.innerHTML = `
-            <img class="img_class"  src="${Datos.data[i].url}" alt="${i}">
-            <h2 class="">${Datos.data[i].nombre}</h2>
-            <p class="#">${Datos.data[i].raza}</p>
-            <p class="#">Edad: ${Datos.data[i].edad}</p>
-            <p class="#">Descripcion: ${Datos.data[i].descripcion}</p>
-            <p class="#">Personalidad: ${Datos.data[i].personalidad}</p>
+            <img class="img_class"  src="${DatosPerros.data[i].url}" alt="${i}">
+            <h2 class="">${DatosPerros.data[i].nombre}</h2>
+            <p class="#">${DatosPerros.data[i].raza}</p>
+            <p class="#">Edad: ${DatosPerros.data[i].edad}</p>
+            <p class="#">Descripcion: ${DatosPerros.data[i].descripcion}</p>
+            <p class="#">Personalidad: ${DatosPerros.data[i].personalidad}</p>
             `
 
     }   
@@ -54,7 +53,7 @@ Descripcion()
 //----------------------------Gatos---------------------------
 const FetchData_Gatos = async () => {
     try {
-        const response = await axios.get('https://adopcion-alpha.vercel.app/gatos')
+        const response = await axios.get('https://adopcion.onrender.com/gatos')
         return response;
     } catch (Error) {
         console.log(Error)

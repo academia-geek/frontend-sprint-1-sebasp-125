@@ -42,7 +42,7 @@ corazon.addEventListener("click", function (){
 
 const FetchData = async () => {
     try {
-        const response = await axios.get('https://adopcion-alpha.vercel.app/registro')
+        const response = await axios.get('https://adopcion.onrender.com/registro')
         return response
        
     } catch (Error) {
@@ -65,7 +65,7 @@ async function guardarDatos() {
     const nuevoCorreo = correo_id.value;
     console.log("Entro a Try");
     try {
-        const response = await axios.put(`https://adopcion-alpha.vercel.app/registro/3` , {
+        const response = await axios.put(`https://adopcion.onrender.com/registro/2` , {
             'nombre_u': nuevoNombre,
             'apellido_u': nuevoApellido,
             'correo_u': nuevoCorreo
