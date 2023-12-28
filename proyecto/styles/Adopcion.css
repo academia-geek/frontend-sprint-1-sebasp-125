@@ -92,16 +92,18 @@ footer {
     margin: 0 60px; 
   }
 /*----------------------------Cuadros de las imagenes--------------*/
-
+/*------------------------------Centrado de las Imaganes (Modo Escriotorio)-----------*/
 .content_cuadros_img {
-    margin: 30px;
-    display: flex;
+   display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;    
-    padding-left: 3%;   
+    margin: 10px;
+    padding-left: 3%;
     transform: translateY(100%);
     animation: deslizarArriba 1s ease-in-out forwards;
 }
+
+
 
 @keyframes deslizarArriba {
     to {
@@ -118,7 +120,7 @@ En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyf
     cursor: pointer;
 }
 
-
+/* Responsive */
     /* Celulares */
   @media screen  and (max-width: 390px){
     body {
@@ -143,11 +145,6 @@ En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyf
 
       /* Imagenes */
 
-
-      #content_cuadros_img_id {
-        padding-right:41px ;
-
-      }
      
       /* Otros */
       .logo_gato {
@@ -174,6 +171,18 @@ En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyf
         margin-top: 5px;
         width: 100%;
         }
+
+        @media screen and (max-width: 390px) {
+          footer {
+              flex-direction: column;
+              align-items: center;
+          }
+      
+          .logo {
+             margin: 20px;
+              
+          }
+      }
     
     
     }

@@ -7,6 +7,9 @@ const content_cuadros_img_id_perros = document.getElementById("content_cuadros_i
 const content_cuadros_img = document.getElementById("content_cuadros_img")
 const content_cuadros_img_id_gatos = document.getElementById("content_cuadros_img_id_gatos")
 
+
+
+
 //Funcionalidad del Footer
 const home = document.getElementById("home")
 const mensajes = document.getElementById("mensaje") 

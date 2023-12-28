@@ -8,13 +8,14 @@ const content_2 = document.getElementById("content_2")
 //SessionStorage
 const recibe = localStorage.getItem('Envia_id_perro')
 const recibe_gato = localStorage.getItem('Envia_id_gato')
-
 const PerroGato = localStorage.getItem('perroGato')
 console.log(PerroGato)
 
 console.log("Gatos: " , recibe_gato)
 console.log("Perros: " , recibe)
 
+//Favoritos
+const favoritos = document.getElementById("favoritos")
 
 //-----------------------Perros---------------------
 const FetchData = async () => {
@@ -85,3 +86,9 @@ if(PerroGato ==  'gato') {
     Descripcion()
 }
 
+//Favoritos
+function fav() {
+   localStorage.setItem('gato_rec' , recibe_gato)
+   localStorage.setItem('perro_rec' , recibe)
+   window.location.href = "favoritos.html"
+}
