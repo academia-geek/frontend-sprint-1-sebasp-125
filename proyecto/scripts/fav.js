@@ -5,12 +5,6 @@ const PerroGato = localStorage.getItem('perroGato')
 const content_fav = document.getElementById('content_fav');
 const content_pru = document.getElementById("content_pru")
 
-
-
-
-const imagenesFavoritas_Perros = [];
-const imagenesFavoritas_Gatos = []
-
 if (recibe_gato !== null || recibe_perro !== null ) {
     // El valor existe
     console.log(recibe_gato);
@@ -25,7 +19,6 @@ const Fetch_Gatos  = async () => {
     try {
         const response = await axios.get('https://adopcion.onrender.com/gatos')
         return response;
-  
     } catch (Error) {
 alert ("No se puede Acceder a la Base de Gatos ", Error)
     }
@@ -36,12 +29,11 @@ async function Fav_gatos() {
     for (let i = 0; i < Datos_Gatos.data.length; i++) {
         if(recibe_gato == Datos_Gatos.data[i].id) {
             content_fav.innerHTML = 
-            `   <div class="img" id="img">
-            <img class="img_class" src="${Datos_Gatos.data[i].url}" alt="${i}">
-        </div>`
-        imagenesFavoritas_Gatos.push(Datos_Gatos.data[i].url)
-        console.log(imagenesFavoritas_Gatos)
-        }  
+            `<img class="img_class" src="${Datos_Gatos.data[i].url}" alt="${i}">`
+            let comp_id = Datos_Gatos.data[i].id
+            localStorage.setItem('miContador', comp_id); 
+        } 
+        
 }
 }
 
@@ -61,28 +53,34 @@ async function Fav_Perros() {
     for (let i = 0; i < Datos_Perros.data.length; i++) {
         if(recibe_perro == Datos_Perros.data[i].id) {
             content_fav.innerHTML = 
-            `   <div class="img" id="img">
-            <img class="img_class" src="${Datos_Perros.data[i].url}" alt="${i}">
-        </div>`
-        const ID_img_Perro = Datos_Perros.data[i].id
-        localStorage.setItem("id_Perro" , ID_img_Perro)
-
-        imagenesFavoritas_Perros.push(Datos_Perros.data[i].url)
-        console.log(imagenesFavoritas_Perros)
+            `<img class="img_class" src="${Datos_Gatos.data[i].url}" alt="${i}">`
+      
         }  
 }
 
 }
 
-const recupe_id_Perro = localStorage.getItem('id_Perro')
-console.log(recupe_id_Perro)
 
+
+async function new_cat () {
+    var contador = localStorage.getItem('miContador');
+    console.log(contador)
+const Datos_Gatos = await Fetch_Gatos()
+    for (let i = 0; i < Datos_Gatos.data.length; i++) {
+        content_pru.innerHTML = 
+        `<img class="img_class" src="${Datos_Gatos.data[contador].url}" alt="${i}">`
+        }
+}
+var contador = localStorage.getItem('miContador');
+
+if (contador != recibe_gato){
+    console.log("paso")
+    new_cat()
+}
 
 if (PerroGato == 'perro') {
     Fav_Perros()
-    
-
 } else if (PerroGato == 'gato'){
+    new_cat()
     Fav_gatos()
-
 }

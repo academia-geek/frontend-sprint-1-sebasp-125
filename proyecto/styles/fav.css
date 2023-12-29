@@ -2,48 +2,54 @@
 
 * {
     font-family: 'Nunito Sans', sans-serif;
+   
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background: var(--Primary, #FEC7D7);
-}
 
-/*Title*/
-h1 {
-    font-weight: bold;
-    font-size: 50px;
-}
 
-.title_fav {
-    margin-left: 20%;
-}
-
-#content_fav {
+.container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-@media (max-width: 390px) {
+.content_fav {
+    width: 300px;
+height: 400px;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+}
 
-    h1 {
-        color: var(--Black, #0E172C);
-        font-size: 30px;
-        font-weight: 2000;
-        line-height: normal;
+.content_fav,  .img_class {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+@media (max-width: 390%) {
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .title_fav {
-
-        margin-left: 10%;
+    .content_fav {
+        width: 300px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
     }
 
-    #content_fav {
-        margin: 0;
-        padding-left: 30px;
-    }
+    .content_fav,  .img_class {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+      }
 
 }
