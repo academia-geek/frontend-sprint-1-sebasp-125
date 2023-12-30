@@ -3,7 +3,7 @@ const img_principal = document.getElementById("img_principal")
 const content_general = document.getElementById("content_general")
 const content_general_gatos = document.getElementById("content_general_gatos")
 
-const content_2 = document.getElementById("content_2")
+const content2 = document.getElementById("content2")
 
 //SessionStorage
 const recibe = localStorage.getItem('Envia_id_perro')
@@ -38,17 +38,35 @@ async function Descripcion() {
     for (let i = 0; i < DatosPerros.data.length; i++) {
         if (recibe == DatosPerros.data[i].id) {
             content_general.innerHTML = `
+            <div class="content_img_class">
             <img class="img_class"  src="${DatosPerros.data[i].url}" alt="${i}">
-            <h2 class="">${DatosPerros.data[i].nombre}</h2>
-            <p class="#">${DatosPerros.data[i].raza}</p>
-            <p class="#">Edad: ${DatosPerros.data[i].edad}</p>
-            <p class="#">Descripcion: ${DatosPerros.data[i].descripcion}</p>
-            <p class="#">Personalidad: ${DatosPerros.data[i].personalidad}</p>
+            </div>
+            <div class="content_name_mascota">
+            <h1 class="nombre_mascota">${DatosPerros.data[i].nombre}</h1>
+            </div>
+            <div class="content_raza_mascota">
+            <p class="raza_mascota">${DatosPerros.data[i].raza}</p>
+            <p class="raza_mascota">${DatosPerros.data[i].edad}</p>
+            </div>
+           
+            <div class="content_ubi">
+            <p class="ubicacion">${DatosPerros.data[i].extra.ubicacion}</p>
+            </div>
             `
-
+            // <p class="#">${DatosPerros.data[i].descripcion}</p> 
+    }
     }   
 }
-}
+
+
+    //Creacion de Contenedores de Personalidades.
+for (let i = 1; i <= 3; i++) {
+    var nuevoContenedor = document.createElement("div");
+    var title = document.createElement("p")
+    nuevoContenedor.classList.add("contenedor_personalidad");
+    document.body.appendChild(nuevoContenedor);
+   }
+
 Descripcion()
 //----------------------------Gatos---------------------------
 const FetchData_Gatos = async () => {
@@ -62,7 +80,7 @@ const FetchData_Gatos = async () => {
 
 async function Descripcion_Gatos() {
     const Datos = await FetchData_Gatos();
-    console.log(Datos)
+    //console.log(Datos.data[1].extra.ubicacion)
     for (let i = 0; i < Datos.data.length; i++) {
         if (recibe_gato == Datos.data[i].id){
             content_general.innerHTML = `
@@ -71,13 +89,18 @@ async function Descripcion_Gatos() {
             </div>
             <h2 class="nombre_class">${Datos.data[i].nombre}</h2>
             <p class="raza">${Datos.data[i].raza}</p>
-            <p class="parrafo">Edad: ${Datos.data[i].edad}</p>
-            <p class="parrafo">Descripcion: ${Datos.data[i].descripcion}</p>
-            <p class="parrafo">Personalidad: ${Datos.data[i].personalidad}</p>
+            <p class="parrafo">${Datos.data[i].edad}</p>
+            <p class="parrafo"> ${Datos.data[i].descripcion}</p>
+            <p class="parrafo"> ${Datos.data[i].personalidad}</p>
             `
         }
+        
     }
 }
+
+
+
+
 //--------------------------------------------------------------------------
 if(PerroGato ==  'gato') {
     Descripcion_Gatos()
