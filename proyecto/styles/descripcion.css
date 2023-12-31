@@ -4,6 +4,17 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.contenedor_personalidad {
+  padding-left: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 8px;
+  border: 2px solid var(--secondary, #A786DF);
+  background: var(--White, #FFFFFE);
+}
+
 @media (max-width: 390px) {
   body {
     margin: 0;
@@ -81,5 +92,27 @@
     border-radius: 8px;
     border: 2px solid var(--secondary, #A786DF);
     background: var(--White, #FFFFFE);
+  }
+
+  /* Agregar a Fav*/
+  .content_btn_fav {
+    margin: 0;
+    padding: 0;
+    text-align: right; /* Alinea el contenido a la derecha */
+      padding: 10px;
+  }
+
+  .btn_fav {
+    background-size: contain; 
+    background-image: url('https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604478/Adopcion/gatos/Guardar1_erlakv.png');
+    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
+    padding: 10px 20px;
+    background-color: rgb(122, 72, 72);
+    color: #fff;
+    border: none;
+    width: 45px; /* Ajusta el ancho del botón según tus necesidades */
+    height: 45px; 
+    border-radius: 50%;
+    cursor: pointer;
   }
 }

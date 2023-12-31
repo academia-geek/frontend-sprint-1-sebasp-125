@@ -58,15 +58,30 @@ async function Descripcion() {
     }   
 }
 
+// Ruta de las Imaganes de Personadlidaes 
+   var rutasImagenes = [
+    'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604480/Adopcion/gatos/jugueton_u6ylwk.png',
+    'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604475/Adopcion/gatos/gatos_lgx2mu.png',
+    'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604481/Adopcion/gatos/male_auckgw.png'
+  ];
 
-    //Creacion de Contenedores de Personalidades.
-for (let i = 1; i <= 3; i++) {
+  // Función para crear contenedor e imagen
+  function crearContenedorConImagen(rutaImagen) {
     var nuevoContenedor = document.createElement("div");
-    var title = document.createElement("p")
     nuevoContenedor.classList.add("contenedor_personalidad");
     document.body.appendChild(nuevoContenedor);
-   }
 
+    var imagen = document.createElement("img");
+    imagen.src = rutaImagen;
+    imagen.classList.add("imagen_personalidad");
+    nuevoContenedor.appendChild(imagen);
+  }
+
+  // Crear contenedores e imágenes
+  for (let i = 0; i < 3; i++) {
+    crearContenedorConImagen(rutasImagenes[i % rutasImagenes.length]);
+  }
+  
 Descripcion()
 //----------------------------Gatos---------------------------
 const FetchData_Gatos = async () => {
@@ -84,14 +99,20 @@ async function Descripcion_Gatos() {
     for (let i = 0; i < Datos.data.length; i++) {
         if (recibe_gato == Datos.data[i].id){
             content_general.innerHTML = `
-            <div class="content_img">
-            <img class="img_class" src="${Datos.data[i].url}" alt="${i}">
+            <div class="content_img_class">
+            <img class="img_class"  src="${Datos.data[i].url}" alt="${i}">
             </div>
-            <h2 class="nombre_class">${Datos.data[i].nombre}</h2>
-            <p class="raza">${Datos.data[i].raza}</p>
-            <p class="parrafo">${Datos.data[i].edad}</p>
-            <p class="parrafo"> ${Datos.data[i].descripcion}</p>
-            <p class="parrafo"> ${Datos.data[i].personalidad}</p>
+            <div class="content_name_mascota">
+            <h1 class="nombre_mascota">${Datos.data[i].nombre}</h1>
+            </div>
+            <div class="content_raza_mascota">
+            <p class="raza_mascota">${Datos.data[i].raza}</p>
+            <p class="raza_mascota">${Datos.data[i].edad}</p>
+            </div>
+           
+            <div class="content_ubi">
+            <p class="ubicacion">${Datos.data[i].extra.ubicacion}</p>
+            </div>
             `
         }
         
