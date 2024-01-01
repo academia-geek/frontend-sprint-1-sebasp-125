@@ -48,22 +48,35 @@ async function Descripcion() {
             <p class="raza_mascota">${DatosPerros.data[i].raza}</p>
             <p class="raza_mascota">${DatosPerros.data[i].edad}</p>
             </div>
-           
             <div class="content_ubi">
             <p class="ubicacion">${DatosPerros.data[i].extra.ubicacion}</p>
             </div>
+            <p class="nombre_history">Historia de ${DatosPerros.data[i].nombre}</p>
+            <p class="descrip_mascota">${DatosPerros.data[i].descripcion}</p> 
             `
-            // <p class="#">${DatosPerros.data[i].descripcion}</p> 
     }
-    }   
+    }
+   
 }
 
 // Ruta de las Imaganes de Personadlidaes 
-   var rutasImagenes = [
-    'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604480/Adopcion/gatos/jugueton_u6ylwk.png',
-    'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604475/Adopcion/gatos/gatos_lgx2mu.png',
-    'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604481/Adopcion/gatos/male_auckgw.png'
-  ];
+var rutasImagenes = [
+    {
+        ruta: 'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604480/Adopcion/gatos/jugueton_u6ylwk.png',
+        nombres: 'Senas'
+    },
+    {
+        ruta: 'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604475/Adopcion/gatos/gatos_lgx2mu.png',
+        nombres: 'Clara'
+  
+    },
+    {
+        ruta: 'https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604481/Adopcion/gatos/male_auckgw.png',
+        nombres: 'sebas'
+    } 
+];
+
+
 
   // Función para crear contenedor e imagen
   function crearContenedorConImagen(rutaImagen) {
@@ -75,13 +88,13 @@ async function Descripcion() {
     imagen.src = rutaImagen;
     imagen.classList.add("imagen_personalidad");
     nuevoContenedor.appendChild(imagen);
-  }
 
-  // Crear contenedores e imágenes
-  for (let i = 0; i < 3; i++) {
-    crearContenedorConImagen(rutasImagenes[i % rutasImagenes.length]);
+ // Crear contenedores e imágenes
   }
-  
+  for (let i = 0; i < 3; i++) {
+    crearContenedorConImagen(rutasImagenes[i].ruta);
+}
+
 Descripcion()
 //----------------------------Gatos---------------------------
 const FetchData_Gatos = async () => {
@@ -113,6 +126,9 @@ async function Descripcion_Gatos() {
             <div class="content_ubi">
             <p class="ubicacion">${Datos.data[i].extra.ubicacion}</p>
             </div>
+
+            <p>Historia de ${Datos.data[i].nombre}</p>
+            <p class="#">${Datos.data[i].descripcion}</p> 
             `
         }
         
