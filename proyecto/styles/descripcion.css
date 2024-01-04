@@ -4,45 +4,36 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
-body {
+/* Estilos para pantallas de escritorio */
+body , html {
+  background: var(--Primary, #FEC7D7);
   margin: 0;
-
 }
-
 .content_img_class {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   height: 300px;
   text-align: center;
   box-sizing: border-box;
-  border-radius: 20px;
 }
 
+
 .img_class {
+  padding-top: 100px;
   object-fit: cover;
-  height: 350px;
-  width: 100%;
+  height: 400px;
+  width: 50%;
 }
 
 /* Nombre */
 .nombre_mascota {
-  color: var(--Black, #0E172C);
-  background-image: url('https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604481/Adopcion/gatos/male_auckgw.png');
-  background-repeat: no-repeat;
-  background-position: 150px 60%;
-
+  margin-top:20px ;
+  padding-top: 100px;
+  padding-left: 100px;
 }
-
-.content_name_mascota {
-  font-weight: 900;
-  margin-top: 40px;
-  margin-left: 20px;
-}
-
-/*Raza */
+/* raza */
 .content_raza_mascota {
   display: flex;
   justify-content: center;
@@ -56,10 +47,12 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   max-width: 800px;
+  padding-right: 20px;
 }
 
 /* Ubicacion */
 .ubicacion {
+  background: var(--Primary, #FEC7D7);  
   background-image: url('https://res.cloudinary.com/dbwgsrqgm/image/upload/v1703890370/Adopcion/perros/Component_1_ewzj9h.jpg');
   background-repeat: no-repeat;
   max-width: 300px;
@@ -67,11 +60,11 @@ body {
 }
 
 .content_ubi {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
-/* Contenedores Personalidad */
-.contenedor_personalidad {
+ /* Contenedores Personalidad */
+ .contenedor_personalidad {
   padding-left: 5px;
   width: 100px;
   height: 100px;
@@ -82,26 +75,16 @@ body {
   background: var(--White, #FFFFFE);
 }
 
-/* Agregar a Fav*/
-.content_btn_fav {
-  margin: 0;
-  padding: 0;
-  text-align: right;
-  padding: 10px;
+.imagen_personalidad {
+  display: flex;
+  padding: 10px 12px;
+  width: 70px;
 }
 
-.btn_fav {
-  background-size: contain;
-  background-image: url('https://res.cloudinary.com/dbwgsrqgm/image/upload/v1702604478/Adopcion/gatos/Guardar1_erlakv.png');
-  filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
-  padding: 10px 20px;
-  background-color: rgb(122, 72, 72);
-  color: #fff;
-  border: none;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  cursor: pointer;
+/* Contenedor de personalidad */
+
+.nuevoContenedor{
+  padding-left: 200px;
 }
 
 @media (max-width: 390px) {
