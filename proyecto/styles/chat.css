@@ -33,7 +33,6 @@ img {
 
 p {
     font-weight: bold;
-    color: #071f58;
     text-align: center;
 }
 
@@ -120,6 +119,9 @@ input {
     text-align: center;
     padding: 5px;
     width: 400px;
+    border-radius: 16px;
+    background: var(--Grey, #535353);
+    color: white;
 }
 
 /*Button*/
@@ -136,4 +138,16 @@ button {
     border-radius: 100px;
     background: var(--Black, #0E172C);
 
+}
+
+.respuesta_p {
+    color: white;
+}
+
+.p_eje {
+    color: #071f58;
+}
+
+p_eje_r {
+    color: white;
 }

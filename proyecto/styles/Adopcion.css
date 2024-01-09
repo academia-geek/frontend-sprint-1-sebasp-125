@@ -133,7 +133,7 @@ En CSS, la regla @keyframes se utiliza para definir animaciones. Dentro de @keyf
   /* Seleccion Gato - Perrp */
       .content_perros,
       .content_gatos {
-        background-color: red;
+        background-color: #0E172C;
         margin: 2px;
         width: 300px;
         text-align: center;

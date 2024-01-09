@@ -31,7 +31,7 @@ mensajes.addEventListener("click" , function(){
 })
 
 corazon.addEventListener("click", function (){
-    window.location.href = "corazon.html"
+    window.location.href = "favoritos.html"
 })
 
 

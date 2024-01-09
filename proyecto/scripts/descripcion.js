@@ -17,6 +17,9 @@ console.log("Perros: " , recibe)
 //Favoritos
 const favoritos = document.getElementById("favoritos")
 
+const contactar_id = document.getElementById('contactar_id')
+
+
 //-----------------------Perros---------------------
 const FetchData = async () => {
     try {
@@ -134,8 +137,6 @@ async function Descripcion_Gatos() {
         
     }
 }
-
-
 
 
 //--------------------------------------------------------------------------

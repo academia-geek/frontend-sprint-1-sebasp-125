@@ -58,7 +58,7 @@ function msgMostrar() {
         `<span>${horaFormateada}</span>
         <div class="content_entrada_div_salida">
             <div class="content_salida">
-                <p>${respuesta}</p>
+                <p class="respuesta_p">${respuesta}</p>
             </div>
         </div>`;
 
